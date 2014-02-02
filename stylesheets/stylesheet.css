@@ -140,7 +140,7 @@ a.button small {
 header a.button {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 20px;
   background: transparent url(../images/github-button.png) 0 0 no-repeat;
 }
 aside a.button {
@@ -385,7 +385,7 @@ footer a:hover {
     font-size: 30px;
   }
   #main-content {
-    width: 490px;
+    width: 100%;
   }
   #main-content h1:before,
   #main-content h2:before,
@@ -483,5 +483,12 @@ strong{
 	font-weight: bold;
 }
 footer{
-	border-top: #9ddcff 2px dashed;
+	border-top: #9ddcff 2px dotted;
+	-webkit-box-shadow: 0 -8px 6px -6px #9ddcff;
+	   -moz-box-shadow: 0 -8px 6px -6px #9ddcff;
+	        box-shadow: 0 -11px 6px -6px #9ddcff;
+}
+code{
+	padding: 2px;
+	border-radius: 4px;
 }
