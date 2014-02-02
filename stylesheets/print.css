@@ -228,3 +228,9 @@ footer a {
 #project-status-list img{
 	vertical-align: middle;
 }
+em{
+	font-style: italic;
+}
+strong{
+	font-weight: bold;
+}
