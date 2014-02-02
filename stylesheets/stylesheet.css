@@ -100,11 +100,6 @@ header h2 {
   padding-top: 30px;
 }
 
-#main-content {
-  width: 690px;
-  float: left;
-}
-
 #main-content img {
   max-width: 100%;
 }
@@ -486,4 +481,7 @@ em{
 }
 strong{
 	font-weight: bold;
+}
+footer{
+	border-top: #9ddcff 2px dashed;
 }
