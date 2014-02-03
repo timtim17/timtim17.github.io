@@ -28,6 +28,9 @@
     	var $h1 = $('#offline');
     	var rainbow = ['crimson', 'orange', 'gold', 'yellowgreen', 'dodgerblue', 'mediumpurple', 'mediumorchid'];
     	$h1.mouseenter(function(){
+    		if($('.buzz-out').length > 0){
+    			$('.buzz-out').removeClass('buzz-out');
+    		}
     		setInterval(function(){
     			$h1.text("");
     			$('<span style="color:' + rainbow[Math.floor(Math.random()*rainbow.length)] + '">J</span><span style="color:' + rainbow[Math.floor(Math.random()*rainbow.length)] + '">K</span>').appendTo($h1);
