@@ -28,12 +28,14 @@
     	var $h1 = $('#offline');
     	var rainbow = ['crimson', 'orange', 'gold', 'yellowgreen', 'dodgerblue', 'mediumpurple', 'mediumorchid'];
     	$h1.mouseenter(function(){
-    		$h1.text("");
-    		$('<span style="color:' + rainbow[Math.floor(Math.random()*rainbow.length)] + '">J</span><span style="color:' + rainbow[Math.floor(Math.random()*rainbow.length)] + '">K</span>').appendTo($h1);
+    		setInterval(function(){
+    			$h1.text("");
+    			$('<span style="color:' + rainbow[Math.floor(Math.random()*rainbow.length)] + '">J</span><span style="color:' + rainbow[Math.floor(Math.random()*rainbow.length)] + '">K</span>').appendTo($h1);
+    		}, 1000);
     	});
-    	$h1.mouseleave(function(){
+    	/*$h1.mouseleave(function(){
     		$h1.text("Site Offline");
-    	});
+    	});*/
     </script>
   </body>
 </html>
