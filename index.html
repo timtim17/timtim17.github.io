@@ -22,16 +22,23 @@
 	  <script src="javascripts/main.js"></script>
   </head>
 
-  <body>
-    <h1 style="text-align: center;" id="offline">Site Offline</h1>
+  <body style="background:#666 0;">
+    <h1 class="buzz-out" style="font-weight:bold;font-size:2em;color:#fafafa;text-align:center;-webkit-animation-delay: 2.5s;animation-delay:2.5s;display:block;" id="offline">Site Offline</h1>
     <script>
     	var $h1 = $('#offline');
-    	$h1.onmouseenter(function(){
-    		$h1.text("JK")	
+    	var rainbow = ['crimson', 'orange', 'gold', 'yellowgreen', 'dodgerblue', 'mediumpurple', 'mediumorchid'];
+    	$h1.mouseenter(function(){
+    		if($('.buzz-out').length > 0){
+    			$('.buzz-out').removeClass('buzz-out');
+    		}
+    		setInterval(function(){
+    			$h1.text("");
+    			$('<span style="color:' + rainbow[Math.floor(Math.random()*rainbow.length)] + '">J</span><span style="color:' + rainbow[Math.floor(Math.random()*rainbow.length)] + '">K</span>').appendTo($h1);
+    		}, 250);
     	});
-    	$h1.onmouseleave(function(){
-    		$h1.text("Site Offline")	
-    	});
+    	/*$h1.mouseleave(function(){
+    		$h1.text("Site Offline");
+    	});*/
     </script>
   </body>
 </html>
