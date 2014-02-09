@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<title>The Cave</title>
+		
+		<style>
+			/* The Cube Cave */
+			.wrap {
+				perspective: 79px;
+				perspective-origin: 50% 100px;
+				-webkit-perspective: 79px;
+				-webkit-perspective-origin: 50% 100px;
+			}
+			.cube {
+				position: relative;
+				width: 200px;
+				transform-style: preserve-3d;
+				-ms-transform-style: preserve-3d;
+				-o-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				-webkit-transform-style: preserve-3d;
+			}
+			.cube div {
+				position: absolute;
+				width: 200px;
+				height: 200px;
+			}
+			.back {
+				transform: translateZ(-100px) rotateY(180deg);
+				-ms-transform: translateZ(-100px) rotateY(180deg);
+				-o-transform: translateZ(-100px) rotateY(180deg);
+				-moz-transform: translateZ(-100px) rotateY(180deg);
+				-webkit-transform: translateZ(-100px) rotateY(180deg);
+			}
+			.right {
+				transform: rotateY(-270deg) translateX(100px);
+				transform-origin: top right;
+				-o-transform: rotateY(-270deg) translateX(100px);
+				-o-transform-origin: top right;
+				-ms-transform: rotateY(-270deg) translateX(100px);
+				-ms-transform-origin: top right;
+				-moz-transform: rotateY(-270deg) translateX(100px);
+				-moz-transform-origin: top right;
+				-webkit-transform: rotateY(-270deg) translateX(100px);
+				-webkit-transform-origin: top right;
+			}
+			.left {
+				transform: rotateY(270deg) translateX(-100px);
+				transform-origin: center left;
+				-moz-transform: rotateY(270deg) translateX(-100px);
+				-moz-transform-origin: center left;
+				-ms-transform: rotateY(270deg) translateX(-100px);
+				-ms-transform-origin: center left;
+				-o-transform: rotateY(270deg) translateX(-100px);
+				-o-transform-origin: center left;
+				-webkit-transform: rotateY(270deg) translateX(-100px);
+				-webkit-transform-origin: center left;
+			}
+			.top {
+				transform: rotateX(-90deg) translateY(-100px);
+				transform-origin: top center;
+				-ms-transform: rotateX(-90deg) translateY(-100px);
+				-ms-transform-origin: top center;
+				-o-transform: rotateX(-90deg) translateY(-100px);
+				-o-transform-origin: top center;
+				-moz-transform: rotateX(-90deg) translateY(-100px);
+				-moz-transform-origin: top center;
+				-webkit-transform: rotateX(-90deg) translateY(-100px);
+				-webkit-transform-origin: top center;
+			}
+			.bottom {
+				transform: rotateX(90deg) translateY(100px);
+				transform-origin: bottom center;
+				-ie-transform: rotateX(90deg) translateY(100px);
+				-ie-transform-origin: bottom center;
+				-o-transform: rotateX(90deg) translateY(100px);
+				-o-transform-origin: bottom center;
+				-moz-transform: rotateX(90deg) translateY(100px);
+				-moz-transform-origin: bottom center;
+				-webkit-transform: rotateX(90deg) translateY(100px);
+				-webkit-transform-origin: bottom center;
+			}
+			.front {
+				transform: translateZ(100px);
+				-ms-transform: translateZ(100px);
+				-o-transform: translateZ(100px);
+				-moz-transform: translateZ(100px);
+				-webkit-transform: translateZ(100px);
+			}
+			@keyframes spin {
+				from { transform: rotateY(0); }
+				to { transform: rotateY(360deg); }
+			}
+			@-ms-keyframes spin {
+				from { transform: rotateY(0); }
+				to { transform: rotateY(360deg); }
+			}
+			@-o-keyframes spin {
+				from { transform: rotateY(0); }
+				to { transform: rotateY(360deg); }
+			}
+			@-moz-keyframes spin {
+				from { transform: rotateY(0); }
+				to { transform: rotateY(360deg); }
+			}
+			@-webkit-keyframes spin {
+				from { transform: rotateY(0); }
+				to { transform: rotateY(360deg); }
+			}
+			.cube {
+				-ms-animation: spin 5s infinite linear;
+				-o-animation: spin 5s infinite linear;
+				-moz-animation: spin 5s infinite linear;
+				-webkit-animation: spin 5s infinite linear;
+				animation: spin 5s infinite linear;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="cube-wrap">
+			<div class="cube depth">
+				<div class="front-pane">front</div>
+				<div class="back-pane">back</div>
+				<div class="top-pane">top</div>
+				<div class="bottom-pane">bottom</div>
+				<div class="left-pane">left</div>
+				<div class="right-pane">right</div>
+			</div>
+		</div>
+	</body>
+</html>
