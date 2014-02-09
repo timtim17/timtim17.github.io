@@ -40,14 +40,23 @@
 
             <h3 class="animated lightSpeedIn">Share Button <a href="https://github.com/carrot/share-button">(carrot/share-button)</a></h3>
 
-                <div class="animated lightSpeedIn" style="animation-delay:1.5s;-webkit-animation-delay:1.5s" id="share">
+                <div class="animated lightSpeedIn" style="animation-delay:1.5s;-webkit-animation-delay:1.5s" id="share" style="color: green;">
                     <!-- Share Button -->
                 </div>
             <script>
                 $('#share').share({text: "This is teh sandbox.",
                                   image: "http://www.idea-sandbox.com/assets/images/sandbox_graphic_baby_blue.png",
                                   icon: 'share',
-                                  flyout: 'top right'});
+                                   color: 'green',
+                                  flyout: 'top right',
+                                  gplus: {link: location.href},
+                                  twitter: {text: "This is teh sandbox.",
+                                            link: location.href},
+                                  facebook: {name: "Teh Sandbox",
+                                            link: location.href,
+                                            image: "http://www.idea-sandbox.com/assets/images/sandbox_graphic_baby_blue.png",
+                                            caption: "The Sandbox",
+                                            text: "This is teh sandbox."}});
             </script>
         </section>
 

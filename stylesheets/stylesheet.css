@@ -492,3 +492,9 @@ code{
 	padding: 2px;
 	border-radius: 4px;
 }
+label{
+    color: green;
+}
+label span{
+    color: #333;
+}
