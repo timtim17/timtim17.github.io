@@ -2,3 +2,5 @@
 ==================
 
 My website. The best website.
+
+Update Status: :red_circle:
