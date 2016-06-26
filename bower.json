@@ -1,0 +1,21 @@
+{
+  "name": "timtim17.github.io",
+  "authors": [
+    "Austin Jenchi <timtim17@users.noreply.github.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "GPL3",
+  "homepage": "http://timtim17.github.io/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer-github-card": "^0.0.1"
+  }
+}
