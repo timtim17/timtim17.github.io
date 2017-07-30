@@ -22,8 +22,8 @@ div#card-container {
   align-items: center;
 }
 
-div#card-container * {
-  margin: 8px;
+div#card-container div.LI-profile-badge {
+  margin-left: 8px;
 }
 
 a {
