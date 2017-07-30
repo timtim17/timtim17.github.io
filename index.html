@@ -4,29 +4,10 @@
     <meta charset='utf-8'>
     <title>timtim17</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	  <link rel="icon" 
-	        type="image/ico" 
+	  <link rel="icon"
+	        type="image/ico"
 	        href="http://www.iconarchive.com/download/i84504/designbolts/seo/Custom-Coding.ico">
-    <style>
-      body, div#container {
-        margin: 0;
-        padding: 0;
-        font-family: 'Lato', sans-serif;
-        font-size: 13px;
-        text-align: center;
-        color: #555;
-        text-shadow: #444 1px 1px;
-      }
-
-      div#container {
-        background: #ddd;
-        background: radial-gradient(ellipse, #ddd, #999);
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
     <script src="bower_components/platform/platform.js"></script>
     <link rel="import" href="bower_components/polymer-github-card/dist/polymer-github-card.html">
   </head>
@@ -34,9 +15,17 @@
   <body>
     <div id="container">
       <div id="content">
-        <polymer-github-card user="timtim17"></polymer-github-card>
-        <p>Website v2 coming soon... eventually...</p>
+        <div id="card-container">
+          <polymer-github-card user="timtim17"></polymer-github-card>
+          <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="austinjenchi"><a class="LI-simple-link" href='https://www.linkedin.com/in/austinjenchi?trk=profile-badge'>Austin J.</a></div>
+        </div>
+        <p>This site is still under construction. While it's in progress, take a look at:</p>
+        <ul>
+          <li><a href="http://team1294.org"><em>FIRST<sup>&reg;</sup></em> Robotics Competition Team 1294, Top Gun, Eastlake High School</a></li>
+        </ul>
       </div>
     </div>
+
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
   </body>
 </html>
