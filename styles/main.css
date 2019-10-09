@@ -92,7 +92,6 @@ section.hero + section::before, section.angle::before, section.angle::after {
     background-color: inherit;
     content: "";
     display: block;
-    height: 4vw;
     left: 0;
     position: absolute;
     right: 0;
@@ -101,9 +100,14 @@ section.hero + section::before, section.angle::before, section.angle::after {
 }
 
 section.hero + section::before {
-    top: -4vw;
-    transform: skewY(2deg);
     box-shadow: 1px -9px 8px 0px rgba(0, 0, 0, 0.75);
+    height: 2.4vw;
+    top: -2.4vw;
+    transform: skewY(1.5deg);
+}
+
+section.hero + section {
+    padding-top: 2vw;
 }
 
 section.angle::before {
@@ -111,23 +115,24 @@ section.angle::before {
 }
 
 section.angle::after {
-    bottom: -4vw;
+    bottom: -3vw;
 }
 
 section.angle::before, section.angle::after {
+    height: 3.1vw;
     transform: skewY(-2deg);
 }
 
 section.angle {
-    padding: 4vw 8px 1vw;
+    padding: 3.5vw 8px;
 }
 
 .before-angle {
-    padding-bottom: 4vw;
+    padding-bottom: 3.5vw;
 }
 
 section.angle + * {
-    padding-top: 5vw;
+    padding-top: 4vw;
 }
 
 section.highlight {
@@ -136,6 +141,7 @@ section.highlight {
 
 footer {
     background-color: #3a5e75;
+    margin-bottom: 16px;
 }
 
 .light-font {
