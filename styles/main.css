@@ -66,8 +66,11 @@ a:hover {
     border-bottom-color: #ffffff;
 }
 
-main > section {
+main > section, .card {
     background-color: #f3f3f3;
+}
+
+main > section {
     color: #222222;
     position: relative;
     z-index: 3;
@@ -146,4 +149,23 @@ footer {
 
 .light-font {
     font-weight: 300;
+}
+
+.card {
+    border: solid 2px #848484;
+    border-radius: 5px;
+    box-shadow: 0px -1px 10px black;
+    margin: 8px;
+    min-width: 200px;
+}
+
+.flex-cards {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-cards .card {
+    flex-grow: 1;
 }
