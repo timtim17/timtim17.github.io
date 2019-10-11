@@ -82,7 +82,7 @@ section.hero {
     background-repeat: no-repeat;
     filter: blur(2px);
     height: 25vw;
-    margin-top: -78px;
+    margin-top: -85px;
     transition: filter 500ms ease;
     z-index: 1;
 }
