@@ -316,6 +316,11 @@ footer {
     scrollbar-width: 7px;
 }
 
+#screenshots img {
+    margin: 0 auto 8px;
+    max-width: 99%;
+}
+
 #screenshots::-webkit-scrollbar, #screenshots::-webkit-scrollbar-thumb {
     border-radius: 5px;
 }
