@@ -4,10 +4,9 @@ layout: basic
 <link rel="stylesheet" href="/styles/projects.css">
 <link rel="stylesheet" href="/styles/project.css">
 
-<a href="/projects" id="btn-close"><i class="fas fa-times"></i></a>
-
 <main>
     <div id="left">
+        <a href="/projects" id="btn-close"><i class="fas fa-times"></i></a>
         <img src="{{ page.icon }}" alt="Project icon">
         <h1>{{ page.title }}</h1>
         <div id="tools">
@@ -26,3 +25,20 @@ layout: basic
         {{ content }}
     </div>
 </main>
+
+<style>
+    #left *, #right * {
+        opacity: 0;
+        transition: opacity 500ms ease;
+    }
+
+    main.loaded #left *, main.loaded #right * {
+        opacity: 1;
+    }
+</style>
+
+<script>
+    window.addEventListener("load", () => {
+        document.querySelector("main").classList.add("loaded");
+    });
+</script>

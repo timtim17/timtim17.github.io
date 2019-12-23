@@ -13,10 +13,9 @@
         <link rel="stylesheet" href="/styles/projects.css">
 <link rel="stylesheet" href="/styles/project.css">
 
-<a href="/projects" id="btn-close"><i class="fas fa-times"></i></a>
-
 <main>
     <div id="left">
+        <a href="/projects" id="btn-close"><i class="fas fa-times"></i></a>
         <img src="https://via.placeholder.com/150x150" alt="Project icon">
         <h1>Test Project</h1>
         <div id="tools">
@@ -75,6 +74,23 @@
 
     </div>
 </main>
+
+<style>
+    #left *, #right * {
+        opacity: 0;
+        transition: opacity 500ms ease;
+    }
+
+    main.loaded #left *, main.loaded #right * {
+        opacity: 1;
+    }
+</style>
+
+<script>
+    window.addEventListener("load", () => {
+        document.querySelector("main").classList.add("loaded");
+    });
+</script>
 
 
         
