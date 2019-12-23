@@ -44,7 +44,7 @@ img {
     left: 8px;
     position: absolute;
     top: 8px;
-    transition: transform 100ms ease;
+    transition: opacity 500ms ease, transform 100ms ease !important;
     z-index: 1000;
 }
 
