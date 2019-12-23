@@ -16,7 +16,9 @@ layout: basic
         </div>
         <div id="screenshots">
             {% for screenshot in page.screenshots %}
-            <img src="{{ screenshot }}" alt="Screenshot of project">
+            <a href="{{ screenshot }}">
+                <img src="{{ screenshot }}" alt="Screenshot of project">
+            </a>
             {% endfor %}
         </div>
     </div>
