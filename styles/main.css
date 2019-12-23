@@ -239,24 +239,48 @@ footer {
     z-index: -99;
 }
 
-#overlay #left, #overlay #right {
+#left, #right {
+    box-sizing: border-box;
+    color: #424242;
     height: 100vh;
+    padding: 10vh 16px;
     position: absolute;
+    top: 0;
 }
 
-#overlay #left {
+#left {
+    align-items: center;
     background-color: #efefef;
-    left: -25vw;
-    transition: left 1s cubic-bezier(0.26, 0.67, 0.01, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0vw;
     width: 25vw;
 }
 
-#overlay #right {
+#overlay #left {
+    left: -25vw;
+    transition: left 1s cubic-bezier(0.26, 0.67, 0.01, 1);
+}
+
+#right {
     background-color: #ffffff;
-    right: -75vw;
-    top: 0;
-    transition: right 1s cubic-bezier(0.26, 0.67, 0.01, 1);
+    right: 0vw;
+    overflow-y: scroll;
     width: 75vw;
+}
+
+#right > * {
+    margin: 16px auto;
+}
+
+#right > *:first-child {
+    margin-top: 0;
+}
+
+#overlay #right {
+    right: -75vw;
+    transition: right 1s cubic-bezier(0.26, 0.67, 0.01, 1);
 }
 
 #overlay.visible {
@@ -269,4 +293,38 @@ footer {
 
 #overlay.visible #right {
     right: 0;
+}
+
+#project {
+    overflow: hidden;
+}
+
+#project h1 {
+    margin-bottom: 8px;
+}
+
+#project img {
+    display: block;
+    max-width: 100%;
+}
+
+#screenshots {
+    margin-top: 16px;
+    overflow-y: scroll;
+    scrollbar-color: #333333;
+    scrollbar-track-color: #cccccc;
+    scrollbar-width: 7px;
+}
+
+#screenshots::-webkit-scrollbar, #screenshots::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+#screenshots::-webkit-scrollbar {
+    background-color: #cccccc;
+    width: 7px;
+}
+
+#screenshots::-webkit-scrollbar-thumb {
+    background: #333333;
 }

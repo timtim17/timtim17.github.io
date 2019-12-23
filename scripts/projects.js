@@ -12,5 +12,8 @@
 
     function overlayAnimation() {
         id("overlay").classList.add("visible");
+        setTimeout(() => {
+            location.href = "project.html";
+        }, 1100)
     }
 })();
