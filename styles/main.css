@@ -177,6 +177,15 @@ footer {
     margin-bottom: 16px;
 }
 
+footer small {
+    float: right;
+    text-align: right;
+}
+
+footer small, footer a:link, footer a:visited {
+    color: #dddddd;
+}
+
 .light-font {
     font-weight: 300;
 }
