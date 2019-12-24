@@ -5,7 +5,12 @@ layout: basic
 
 <main>
     {% if page.hero_img %}
-    <section class="hero" style="background-image: url('{{ page.hero_img }}');{% if page.hero_height %}height: {{ page.hero_height }};{% endif %}"></section>
+        <section class="hero" style="background-image: url('{{ page.hero_img }}');{% if page.hero_height %}height: {{ page.hero_height }};{% endif %}"></section>
+        {% if page.hero_contents %}
+            <div {% if page.hero_height %}style="height: {{ page.hero_height }};"{% endif %} class="hero-contents">
+                {% include {{ page.hero_contents }} %}
+            </div>
+        {% endif %}
     {% endif %}
 
     {{ content }}

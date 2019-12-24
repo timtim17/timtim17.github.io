@@ -37,17 +37,16 @@ nav {
     align-items: center;
     display: flex;
     flex-grow: 1;
-    font-size: 16pt;
     height: 70px;
     justify-content: space-between;
 }
 
-nav ul {
+nav ul, .social-list {
     list-style: none;
     padding-left: 0;
 }
 
-nav ul li {
+nav ul li, .social-list li {
     display: inline;
     margin: 0 4px;
 }
@@ -64,6 +63,10 @@ a {
 
 a:hover {
     border-bottom-color: #ffffff;
+}
+
+main {
+    position: relative;
 }
 
 main > section, .card {
@@ -83,12 +86,7 @@ section.hero {
     filter: blur(2px);
     height: 25vw;
     margin-top: -85px;
-    transition: filter 500ms ease;
     z-index: 1;
-}
-
-section.hero:hover {
-    filter: blur(0);
 }
 
 section.hero + section::before, section.angle::before, section.angle::after {
@@ -111,6 +109,18 @@ section.hero + section::before {
 
 section.hero + section {
     padding-top: 2vw;
+}
+
+.hero-contents {
+    align-items: center;
+    display: flex;
+    height: 25vw;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 section.angle::before {
@@ -182,7 +192,7 @@ footer small {
     text-align: right;
 }
 
-footer small, footer a:link, footer a:visited {
+footer small, footer a {
     color: #dddddd;
 }
 
@@ -209,12 +219,16 @@ footer small, footer a:link, footer a:visited {
     flex-grow: 1;
 }
 
-.fa-discord {
+.social-discord {
     position: relative;
 }
 
-.fa-discord #discord-floater {
-    background: #7289DA;
+.social-discord:hover .fa-discord {
+    color: #7289da;
+}
+
+.discord-floater {
+    background-color: #7289DA;
     border-radius: 5px;
     color: white;
     font-size: 1em;
@@ -227,7 +241,23 @@ footer small, footer a:link, footer a:visited {
     visibility: hidden;
 }
 
-.fa-discord:hover span#discord-floater {
+.social-discord:hover .discord-floater {
     opacity: 1;
     visibility: visible;
+}
+
+.svg-inline--fa {
+    transition: color 500ms ease;
+}
+
+.fa-github:hover {
+    color: #000000;
+}
+
+.fa-linkedin:hover {
+    color: #2867B2;
+}
+
+.fa-twitter:hover {
+    color: #1DA1F2;
 }
