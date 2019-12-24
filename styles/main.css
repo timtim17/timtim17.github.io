@@ -89,7 +89,7 @@ section.hero {
     z-index: 1;
 }
 
-section.hero + section::before, section.angle::before, section.angle::after {
+section.hero + section::before, .hero-contents + section::before, section.angle::before, section.angle::after {
     background-color: inherit;
     content: "";
     display: block;
@@ -100,14 +100,14 @@ section.hero + section::before, section.angle::before, section.angle::after {
     z-index: 2;
 }
 
-section.hero + section::before {
+section.hero + section::before, .hero-contents + section::before {
     box-shadow: 1px -9px 8px 0px rgba(0, 0, 0, 0.75);
     height: 2.4vw;
     top: -2.4vw;
     transform: skewY(1.5deg);
 }
 
-section.hero + section {
+section.hero + section, .hero-contents + section {
     padding-top: 2vw;
 }
 
