@@ -1,0 +1,87 @@
+body {
+  background-image: url('/img/pdrops.svg');
+  background-position: 90% top;
+  background-repeat: no-repeat;
+  background-size: 30vw;
+  background-color: #333333;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16pt;
+  color: white;
+}
+
+main {
+  margin-top: 10%;
+}
+
+a {
+    text-decoration: none;
+    transition: border-bottom-color 100ms ease;
+    border-bottom: 2px solid transparent;
+}
+
+a, a:visited {
+  color: inherit;
+}
+
+a:hover {
+    border-bottom-color: #ffffff;
+}
+
+.social-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.social-list li {
+  display: inline;
+  margin: 0 4px;
+}
+
+.social-discord {
+  position: relative;
+}
+
+.social-discord:hover .fa-discord {
+  color: #7289da;
+}
+
+.discord-floater {
+  background-color: #7289DA;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  left: -300%;
+  opacity: 0;
+  padding: 4px;
+  position: absolute;
+  top: 1.2em;
+  transition: opacity 500ms linear;
+  visibility: hidden;
+}
+
+.social-discord:hover .discord-floater {
+  opacity: 1;
+  visibility: visible;
+}
+
+.svg-inline--fa {
+  transition: color 500ms ease;
+}
+
+.fa-github:hover {
+  color: #000000;
+}
+
+.fa-linkedin:hover {
+  color: #2867B2;
+}
+
+.fa-twitter:hover {
+  color: #1DA1F2;
+}
+
+@media screen and (min-width: 650px) {
+  main {
+    padding-left: 10%;
+  }
+}

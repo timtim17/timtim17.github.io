@@ -219,6 +219,10 @@ footer small, footer a {
     flex-grow: 1;
 }
 
+.social-list a, .social-list a:visited {
+    color: inherit;
+}
+
 .social-discord {
     position: relative;
 }
