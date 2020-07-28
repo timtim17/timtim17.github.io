@@ -2,5 +2,6 @@ title: Austin's Website
 email: ajenchi@uw.edu
 description: Austin Jenchi's personal portfolio website.
 baseurl: "/"
+repository: timtim17/timtim17.github.io
 include:
   - _pages
