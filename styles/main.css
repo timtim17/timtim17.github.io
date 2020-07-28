@@ -1,0 +1,267 @@
+body {
+    background-color: #353535;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16pt;
+    margin: 16px auto 0;
+    width: 90vw;
+}
+
+body, nav a, section.highlight {
+    color: #ffffff;
+}
+
+header, section, footer {
+    padding: 8px;
+}
+
+header {
+    align-items: center;
+    /* background-color: #272121; */
+    background-color: rgba(39, 33, 33, 0.3);
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+header h1 {
+    cursor: default;
+    display: inline;
+    font-size: 18pt;
+    font-weight: 900;
+    margin-right: 8px;
+    text-transform: uppercase;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    height: 70px;
+    justify-content: space-between;
+}
+
+nav ul, .social-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li, .social-list li {
+    display: inline;
+    margin: 0 4px;
+}
+
+nav a[href="#"] {  /* current page */
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: border-bottom-color 100ms ease;
+    border-bottom: 2px solid transparent;
+}
+
+a:hover {
+    border-bottom-color: #ffffff;
+}
+
+main {
+    position: relative;
+}
+
+main > section, .card {
+    background-color: #f3f3f3;
+}
+
+main > section {
+    color: #424242;
+    position: relative;
+    z-index: 3;
+}
+
+section.hero {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    height: 25vw;
+    margin-top: -85px;
+    z-index: 1;
+}
+
+section.hero + section::before, .hero-contents + section::before, section.angle::before, section.angle::after {
+    background-color: inherit;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform-origin: 0;
+    z-index: 2;
+}
+
+section.hero + section::before, .hero-contents + section::before {
+    box-shadow: 1px -9px 8px 0px rgba(0, 0, 0, 0.75);
+    height: 2.4vw;
+    top: -2.4vw;
+    transform: skewY(1.5deg);
+}
+
+section.hero + section, .hero-contents + section {
+    padding-top: 2vw;
+}
+
+.hero-contents {
+    align-items: center;
+    display: flex;
+    height: 25vw;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+section.angle::before {
+    top: 0;
+}
+
+section.angle::after {
+    bottom: -3vw;
+}
+
+section.angle::before, section.angle::after {
+    height: 3.1vw;
+    transform: skewY(-2deg);
+}
+
+section.angle {
+    padding: 3.5vw 8px;
+}
+
+.before-angle {
+    padding-bottom: 3.5vw;
+}
+
+section.angle + * {
+    padding-top: 4vw;
+}
+
+section.highlight {
+    background-color: #ff8d33;
+}
+
+h2 {
+    font-size: 2em;
+    margin: -10px 0 8px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 4px 0;
+}
+
+p {
+    margin: 4px 0 6px;
+}
+
+button {
+    background-color: #ff8d33;
+    border-radius: 10px;
+    border: 4px solid #ee5c11;
+    color: white;
+    cursor: pointer;
+    font-family: "Source Sans Pro", sans-serif;
+    margin-top: 10px;
+    padding: 8px;
+    transition: background-color 100ms ease;
+}
+
+button:hover {
+    background-color: #ee5c11;
+}
+
+footer {
+    background-color: #3a5e75;
+    margin-bottom: 16px;
+}
+
+footer small {
+    float: right;
+    text-align: right;
+}
+
+footer small, footer a {
+    color: #dddddd;
+}
+
+.light-font {
+    font-weight: 300;
+}
+
+.card {
+    border: solid 2px #848484;
+    border-radius: 5px;
+    box-shadow: 0px -1px 10px black;
+    margin: 8px;
+    min-width: 200px;
+}
+
+.flex-cards {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-cards .card {
+    flex-grow: 1;
+}
+
+.social-list a, .social-list a:visited {
+    color: inherit;
+}
+
+.social-discord {
+    position: relative;
+}
+
+.social-discord:hover .fa-discord {
+    color: #7289da;
+}
+
+.discord-floater {
+    background-color: #7289DA;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    left: -300%;
+    opacity: 0;
+    padding: 4px;
+    position: absolute;
+    top: 1.2em;
+    transition: opacity 500ms linear;
+    visibility: hidden;
+}
+
+.social-discord:hover .discord-floater {
+    opacity: 1;
+    visibility: visible;
+}
+
+.svg-inline--fa {
+    transition: color 500ms ease;
+}
+
+.fa-github:hover {
+    color: #000000;
+}
+
+.fa-linkedin:hover {
+    color: #2867B2;
+}
+
+.fa-twitter:hover {
+    color: #1DA1F2;
+}

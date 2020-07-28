@@ -1,0 +1,46 @@
+---
+layout: basic
+---
+<link rel="stylesheet" href="/styles/projects.css">
+<link rel="stylesheet" href="/styles/project.css">
+
+<main>
+    <div id="left">
+        <a href="/projects" id="btn-close"><i class="fas fa-times"></i></a>
+        <img src="{{ page.icon }}" alt="Project icon">
+        <h1>{{ page.title }}</h1>
+        <div id="tools">
+            {% for icon in page.toolicons %}
+            <i class="fab fa-{{ icon }}"></i>
+            {% endfor %}
+        </div>
+        <div id="screenshots">
+            {% for screenshot in page.screenshots %}
+            <a href="{{ screenshot }}">
+                <img src="{{ screenshot }}" alt="Screenshot of project">
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="right">
+        {{ content }}
+    </div>
+</main>
+
+<style>
+    #left *, #right * {
+        opacity: 0;
+        transition: opacity 500ms ease;
+    }
+
+    main.loaded #left *, main.loaded #right * {
+        opacity: 1;
+    }
+</style>
+
+<script>
+    window.addEventListener("load", () => {
+        document.querySelector("main").classList.add("loaded");
+    });
+</script>

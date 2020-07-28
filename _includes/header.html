@@ -1,0 +1,11 @@
+<header>
+    <h1>Austin <span class="light-font">Jenchi</span></h1>
+    <nav>
+        <ul>
+            <li><a href="{% if page.title == 'About' %}#{% else %}{{ site.baseurl }}{% endif %}">About Me</a></li>
+            <li><a href="{% if page.title == 'Projects' %}#{% else %}{{ site.baseurl }}projects{% endif %}">Projects</a></li>
+        </ul>
+
+        {% include social-list.html %}
+    </nav>
+</header>

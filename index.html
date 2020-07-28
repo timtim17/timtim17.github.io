@@ -1,33 +1,79 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>timtim17</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	  <link rel="icon"
-	        type="image/ico"
-	        href="http://www.iconarchive.com/download/i84504/designbolts/seo/Custom-Coding.ico">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="bower_components/platform/platform.js"></script>
-    <link rel="import" href="bower_components/polymer-github-card/dist/polymer-github-card.html">
-  </head>
+---
+layout: minimal
+title: About
+---
 
-  <body>
-    <div id="container">
-      <div id="content">
-        <div id="card-container">
-          <polymer-github-card user="timtim17"></polymer-github-card>
-          <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="austinjenchi"><a class="LI-simple-link" href='https://www.linkedin.com/in/austinjenchi?trk=profile-badge'>Austin J.</a></div>
-        </div>
-        <p>This site is still under construction. While it's in progress, take a look at:</p>
-        <a href="http://team1294.org" class="links-item"><em>FIRST<sup>&reg;</sup></em> Robotics Competition Team 1294, Top Gun, Eastlake High School</a>
-        <div>
-		<a href="https://api.badgr.io/public/assertions/PLr8JIjsS6m2ShXWDHVkfg" target="_blank"><img src="https://badgr-io-media.s3.amazonaws.com/uploads/badges/assertion-PLr8JIjsS6m2ShXWDHVkfg..png?embedVersion=1&amp;embedWidth=128&amp;embedHeight=128" width="128" height="128" alt="Badgr Badge: NI LabVIEW for FRC RIO Programming"></a>
-      		<a href="https://api.badgr.io/public/assertions/KrG7DtSwSYKTNQZ43pi1IQ" target="_blank"><img src="https://badgr-io-media.s3.amazonaws.com/uploads/badges/assertion-KrG7DtSwSYKTNQZ43pi1IQ..png?embedVersion=1&amp;embedWidth=128&amp;embedHeight=128" width="128" height="128" alt="Badgr Badge: NI roboRIO Robot Control"></a>
-	</div>
-      </div>
-    </div>
+<header>
+  <img src="/img/profile.jpg" alt="Profile picture">
+  <div>
+      <h1>Austin Jenchi</h1>
+      <h2>Student, University of Washington</h2>
+      <address>
+          <p>
+              <i class="fas fa-envelope fa-fw"></i>
+              <a href="mailto:ajenchi@uw.edu">ajenchi@uw.edu</a>
+          </p>
 
-    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-  </body>
-</html>
+          <p>
+              <i class="fas fa-map-marker-alt fa-fw"></i>
+              Seattle, WA
+          </p>
+      </address>
+      {% include social-list.html %}
+  </div>
+</header>
+
+<section>
+  <p>
+    Hi! I'm Austin. I'm currently a student at the University of Washington (Seattle) interested in
+    programming and using code to solve problems.
+  </p>
+</section>
+
+<section>
+  <small>(site still work in progress)</small>
+</section>
+
+<style>
+  header {
+    display: flex;
+  }
+
+  header > img {
+    width: 200px;
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 16px;
+    transition: border-radius 100ms ease;
+    flex-shrink: 0;
+  }
+
+  header > img:hover {
+    border-radius: 20%;
+  }
+
+  header h1, header .social-list svg {
+    font-size: 1.7em;
+  }
+
+  header h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+
+  header > div > *, header address p {
+    margin: 4px 0;
+  }
+
+  header address {
+    font-style: normal;
+  }
+
+  header address svg {
+    margin-right: 4px;
+  }
+
+  .discord-floater {
+    left: -50px;
+  }
+</style>

@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    width: initial;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+#screenshots {
+    margin-top: 16px;
+    overflow-y: scroll;
+    scrollbar-color: #333333;
+    scrollbar-track-color: #cccccc;
+    scrollbar-width: 7px;
+}
+
+#screenshots img {
+    margin: 0 auto 8px;
+    max-width: 99%;
+}
+
+#screenshots::-webkit-scrollbar, #screenshots::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+#screenshots::-webkit-scrollbar {
+    background-color: #cccccc;
+    width: 7px;
+}
+
+#screenshots::-webkit-scrollbar-thumb {
+    background: #333333;
+}
+
+#btn-close {
+    border: none !important;
+    color: #424242;
+    font-size: 2em;
+    left: 8px;
+    position: absolute;
+    top: 8px;
+    transition: opacity 500ms ease, transform 100ms ease !important;
+    z-index: 1000;
+}
+
+#btn-close:hover {
+    transform: rotate(10deg);
+}

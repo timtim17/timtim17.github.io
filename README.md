@@ -1,4 +1,17 @@
-[timtim17.github.io](http://timtim17.github.io)
+[timtim17.github.io](https://timtim17.github.io)
 ==================
 
-Website v2 coming soon... eventually...
+website work in progress... yeah...
+
+```html
+<website>
+    <progress style="display: none;" />
+    <script>
+        try {
+            document.querySelector("progress").load();
+        } catch (err) {
+            procrastinate();
+        }
+    </script>
+</website>
+```

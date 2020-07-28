@@ -1,0 +1,70 @@
+main > section.card > img {
+    float: right;
+    max-height: 100%;
+}
+
+#overlay {
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100vw;
+    z-index: -99;
+}
+
+#left, #right {
+    box-sizing: border-box;
+    color: #424242;
+    height: 100vh;
+    padding: 10vh 16px 8px;
+    position: absolute;
+    top: 0;
+}
+
+#left {
+    align-items: center;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0vw;
+    width: 25vw;
+}
+
+#overlay #left {
+    left: -25vw;
+    transition: left 1s cubic-bezier(0.26, 0.67, 0.01, 1);
+}
+
+#right {
+    background-color: #ffffff;
+    right: 0vw;
+    overflow-y: scroll;
+    width: 75vw;
+}
+
+#right > * {
+    margin: 16px auto;
+}
+
+#right > *:first-child {
+    margin-top: 0;
+}
+
+#overlay #right {
+    right: -75vw;
+    transition: right 1s cubic-bezier(0.26, 0.67, 0.01, 1);
+}
+
+#overlay.visible {
+    z-index: 99;
+}
+
+#overlay.visible #left {
+    left: 0;
+}
+
+#overlay.visible #right {
+    right: 0;
+}

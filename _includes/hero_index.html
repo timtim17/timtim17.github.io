@@ -1,0 +1,91 @@
+<div>
+    <img src="/img/profile.jpg" alt="Profile picture">
+    <div>
+        <h1>Austin Jenchi</h1>
+        <h2>Student, University of Washington</h2>
+        <address>
+            <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:ajenchi@uw.edu">ajenchi@uw.edu</a>
+            </p>
+
+            <p>
+                <i class="fas fa-map-marker-alt"></i>
+                Seattle, WA
+            </p>
+        </address>
+        {% include social-list.html %}
+    </div>
+</div>
+
+<style>
+    .hero-contents, .hero-contents .social-list a:visited, .hero-contents address a {
+        color: #333333;
+    }
+
+    .hero-contents > div {
+        align-items: stretch;
+        background-color: rgba(233, 233, 233, 0.58);
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        padding: 4px;
+    }
+
+    .hero-contents > div > img {
+        border-radius: 50%;
+        height: 200px;
+        margin-right: 16px;
+        transition: border-radius 100ms ease;
+    }
+
+    .hero-contents > div > img:hover {
+        border-radius: 20%;
+    }
+
+    .hero-contents > div > div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+
+    .hero-contents h1, .hero-contents h2 {
+        margin: -4px 0;
+    }
+
+    .hero-contents h2 {
+        font-size: 1em;
+    }
+
+    .hero-contents .social-list {
+        align-self: flex-end;
+        font-size: 1.5em;
+        margin: auto 0 0;
+    }
+
+    .hero-contents .social-list li:first-of-type {
+        margin-left: 0;
+    }
+
+    .hero-contents .discord-floater {
+        top: 2.5em;
+        font-size: 0.5em;
+        left: -115%;
+    }
+
+    .hero-contents address {
+        font-style: normal;
+        margin: 8px 0;
+    }
+
+    .hero-contents .fa-envelope {
+        color: rgb(248, 193, 42);
+        vertical-align: middle;
+    }
+
+    .hero-contents .fa-map-marker-alt {
+        color: rgb(233, 165, 20);
+        margin: 0 calc((21.33px - 16px) / 2); /* make the icons the same width */
+    }
+</style>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Austin Jenchi | {{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Austin Jenchi">
+    <meta name="description" content="Austin's personal website and portfolio.">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900&display=swap"  rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.baseurl }}styles/minimal.css">
+    {% if page.styles %}
+      {% for style in page.styles %}
+        <link rel="stylesheet" href="{{ style }}">
+      {% endfor %}
+    {% endif %}
+    <script src="https://kit.fontawesome.com/3b143cc8d1.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/img/favicon-228.png">
+    <link rel="apple-touch-icon" href="/img/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#2F7C97">
+    <meta name="msapplication-TileImage" content="/img/favicon-144.png">
+    <meta name="msapplication-config" content="/img/browserconfig.xml" >
+    <meta name="theme-color" content="#2F7C97">
+  </head>
+
+  <body>
+    <main>
+      {{ content }}
+    </main>
+
+    {% if page.scripts %}
+      {% for script in page.scripts %}
+        <script src="{{ script }}"></script>
+      {% endfor %}
+    {% endif %}
+  </body>
+</html>
