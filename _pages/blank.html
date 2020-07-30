@@ -11,7 +11,7 @@ permalink: /blank
 </style>
 
 <script>
-  document.body.addEventListener('dblclick', () => {
+  document.getRootNode().addEventListener('dblclick', () => {
     document.getElementById('pdrops').contentWindow.dispatchEvent(new CustomEvent('pdrops'));
   });
 </script>
