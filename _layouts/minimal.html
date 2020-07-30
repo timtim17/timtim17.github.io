@@ -7,7 +7,7 @@
     <meta name="author" content="Austin Jenchi">
     <meta name="description" content="Austin's personal website and portfolio.">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900&display=swap"  rel="stylesheet">
-    <link rel="stylesheet" href="{{ site.baseurl }}styles/minimal.css">
+    <link rel="stylesheet" href="/styles/minimal.css">
     {% if page.styles %}
       {% for style in page.styles %}
         <link rel="stylesheet" href="{{ style }}">
@@ -20,9 +20,12 @@
     <meta name="msapplication-TileImage" content="/img/favicon-144.png">
     <meta name="msapplication-config" content="/img/browserconfig.xml" >
     <meta name="theme-color" content="#2F7C97">
+    <script src="/scripts/minimal.js"></script>
   </head>
 
   <body>
+    <object type="image/svg+xml" data="/img/pdrops.svg" id="pdrops"></object>
+
     <main>
       {{ content }}
     </main>

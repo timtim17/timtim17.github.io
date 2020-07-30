@@ -1,8 +1,4 @@
 body {
-  background-image: url('/img/pdrops.svg');
-  background-position: 90% top;
-  background-repeat: no-repeat;
-  background-size: 30vw;
   background-color: #333333;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16pt;
@@ -11,6 +7,12 @@ body {
 
 main {
   margin-top: 10%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.fontawesome-i2svg-active main {
+  opacity: 1;
 }
 
 a {
@@ -78,6 +80,18 @@ a:hover {
 
 .fa-twitter:hover {
   color: #1DA1F2;
+}
+
+#pdrops {
+  position: absolute;
+  right: 7%;
+  top: calc(-1 * 147.97 * 30vw / 399);
+  width: 30vw;
+  transition: top 500ms ease;
+}
+
+.fontawesome-i2svg-active #pdrops {
+  top: 0;
 }
 
 @media screen and (min-width: 650px) {
