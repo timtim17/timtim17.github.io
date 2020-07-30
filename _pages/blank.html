@@ -3,3 +3,15 @@ layout: minimal
 title: A Nondescript Page
 permalink: /blank
 ---
+
+<style>
+  #pdrops {
+    top: 0 !important;
+  }
+</style>
+
+<script>
+  document.body.addEventListener('dblclick', () => {
+    document.getElementById('pdrops').contentWindow.dispatchEvent(new CustomEvent('pdrops'));
+  });
+</script>
