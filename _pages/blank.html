@@ -11,13 +11,17 @@ permalink: /blank
 </style>
 
 <script>
-  const start = new URLSearchParams(window.location.search);
-  if (!start || start === "off") {
-    toggleView();
-  }
-  document.getRootNode().addEventListener('dblclick', toggleView);
+  const svg = document.getElementById('pdrops');
+  const start = new URLSearchParams(window.location.search).get('start');
+  const thisDocument = document;
+  svg.contentWindow.addEventListener('load', () => {
+    if (!start || start === "on") {
+      toggleView();
+    }
+    thisDocument.getRootNode().addEventListener('dblclick', toggleView);
+  });
 
   function toggleView() {
-    document.getElementById('pdrops').contentWindow.dispatchEvent(new CustomEvent('pdrops'));
+    svg.contentWindow.dispatchEvent(new CustomEvent('pdrops'));
   }
 </script>
