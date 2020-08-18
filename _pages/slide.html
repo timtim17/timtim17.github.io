@@ -1,0 +1,65 @@
+---
+layout: minimal
+title: A Nondescript Page
+permalink: /slide
+---
+
+<h1 contenteditable></h1>
+<h2 contenteditable></h2>
+
+<style>
+  #pdrops {
+    top: 0 !important;
+  }
+
+  main {
+    opacity: 1 !important;
+  }
+</style>
+
+<script>
+  const svg = document.getElementById('pdrops');
+  const start = new URLSearchParams(window.location.search).get('start');
+  const thisDocument = document;
+  svg.contentWindow.addEventListener('load', () => {
+    if (!start || start === "on") {
+      toggleView();
+    }
+    thisDocument.getRootNode().addEventListener('dblclick', toggleView);
+  });
+
+  function toggleView() {
+    svg.contentWindow.dispatchEvent(new CustomEvent('pdrops'));
+  }
+
+  const LS_TITLE = 'title';
+  const LS_SUB = 'subtitle';
+
+  let title = localStorage.getItem(LS_TITLE);
+  let sub = localStorage.getItem(LS_SUB);
+
+  if (!title) {
+    title = 'Title Text';
+    localStorage.setItem(LS_TITLE, title);
+  }
+  if (!sub) {
+    sub = 'Bottom Text';
+    localStorage.setItem(LS_SUB, sub);
+  }
+
+  let titleEle = document.querySelector('h1');
+  let subEle = document.querySelector('h2');
+
+  titleEle.textContent = title;
+  subEle.textContent = sub;
+
+  titleEle.addEventListener('input', function() {
+    title = this.textContent;
+    localStorage.setItem(LS_TITLE, title);
+  });
+
+  subEle.addEventListener('input', function() {
+    sub = this.textContent;
+    localStorage.setItem(LS_SUB, sub);
+  });
+</script>
