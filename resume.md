@@ -1,10 +1,10 @@
 # Austin Jenchi
 
-ajenchi@uw.edu
+[ajenchi@uw.edu](mailto:ajenchi@uw.edu)
 
-https://timtim17.github.io
+[https://timtim17.github.io](https://timtim17.github.io)
 
-http://www.linkedin.com/in/austinjenchi
+[http://www.linkedin.com/in/austinjenchi](http://www.linkedin.com/in/austinjenchi)
 
 # Summary
 
